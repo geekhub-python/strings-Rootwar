@@ -18,46 +18,13 @@ print('4.All string and not two last symbol: ', string[:-2])
 print('5.String length: ', len(string))
 
 #6
-string_even = ''
-
-for i, s in enumerate(string):
-    if i % 2 == 0:
-        continue
-    string_even += s
-
-print('6.All symbols with even index at string: ', string_even)
+print('6.All symbols with even index at string: ', string[1::2])
 
 #7
-string_odd = ''
-
-for i, s in enumerate(string):
-    if i % 2 != 0:
-        continue
-    string_odd += s
-
-print('7.All symbols with odd index at string: ', string_odd)
+print('7.All symbols with odd index at string: ', string[::2])
 
 #8
-string_reverse = []
-
-for s in string:
-    string_reverse.append(s)
-
-string_reverse.reverse()
-
-print('8.Reverse symbols at string: ', ''.join(string_reverse))
+print('8.Reverse symbols at string: ', string[::-1])
 
 #9
-string_reverse = []
-string_even = ''
-
-for s in string:
-    string_reverse.append(s)
-string_reverse.reverse()
-
-for i, s in enumerate(string):
-    if i % 2 == 0:
-        s = string_reverse[i]
-    string_even += s
-
-print('9.Reverse odd symbols at string: ', string_even)
+print('9.Reverse odd symbols at string: ', string[2:2:-1])
